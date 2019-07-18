@@ -37,9 +37,18 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['scripts/*.js', 'styles/*.css'],
-                tasks: ['concat', 'uglify', 'cssmin', 'commits'],
+                tasks: ['concat', 'uglify', 'cssmin', 'commits', 'jsdoc'],
             },
+        },
+        jsdoc: {
+            dist: {
+                src: ['scripts/*.js', 'styles/*.css'],
+                options: {
+                    destination: 'doc'
+                }
+            }
         }
+
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -48,6 +57,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-git-commits');
+    grunt.loadNpmTasks('grunt-jsdoc');
 
     // Default task(s).
     grunt.registerTask('default', ['watch']);

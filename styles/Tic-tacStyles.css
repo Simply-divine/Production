@@ -12,6 +12,7 @@
 
 html {
     background-color: rgb(35, 36, 35);
+    box-sizing: border-box;
 }
 
 table {

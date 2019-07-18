@@ -36,7 +36,7 @@ function startgame() {
 }
 
 function turnclick(x) {
-    //   console.log(typeof origboard[x.target.id])
+
 
     if (typeof origboard[x.target.id] == 'number') {
         turn(x.target.id, huplayer);

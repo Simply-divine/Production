@@ -34,4 +34,3 @@ function myfunc(firstName, lastName, age) {
 }
 var har = new myfunc("hardik", "upadhyay", 19);
 console.log(har);
-//getter methods
