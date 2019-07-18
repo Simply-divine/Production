@@ -9,6 +9,14 @@ module.exports = function(grunt) {
                 dest: 'dist/app.js',
             }
         },
+        commits: {
+            options: {
+                format: /^(Add|Update|Fix|Remove|Docs|Deps):/,
+                begin: 'some-sha',
+                noMerge: false,
+                strict: true
+            }
+        },
         uglify: {
             build: {
                 src: 'dist/app.js',
@@ -29,7 +37,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['scripts/*.js', 'styles/*.css'],
-                tasks: ['concat', 'uglify', 'cssmin'],
+                tasks: ['concat', 'uglify', 'cssmin', 'commits'],
             },
         }
     });
@@ -39,6 +47,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-git-commits');
+
     // Default task(s).
     grunt.registerTask('default', ['watch']);
 };

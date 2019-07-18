@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+}
+
+div h1 {
+    color: maroon;
+    text-transform: capitalize;
+    text-shadow: 0.2em;
+}
+
+.content {
+    font-size: 2em;
+    font-family: 'Marck Script', cursive;
+}
+
+html {
+    margin: 0 auto;
+    padding: 0 50px;
+    background-color: orange;
+}
+
+body {
+    background-color: blueviolet;
+    height: 90%;
+    border: 2px solid black;
+}
+
+form {
+    background-color: black;
+    color: pink;
+}
+
+p {
+    line-height: 50px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+label {
+    display: block;
+    padding: 20px;
+}
